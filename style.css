@@ -1,0 +1,195 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+img{
+    width: 30px;
+    height: 30px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #666666, #f1f1f1);
+}
+
+.container{
+    width: 100%;
+    max-width: 420px;
+    background-color: #fdfdfd;
+    border-radius: .5em;
+}
+.content{
+    padding: .5em;
+}
+.content header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin: 1em 0;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #bcbcbc;
+    
+}
+.content header img{
+    width: 40px;
+    height: 40px;
+    animation: fadingIcon 1.5s alternate infinite;
+}
+
+@keyframes fadingIcon {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: .1;
+    }
+}
+
+
+.content header div{
+    font-size: 1.5em;
+    color: #111111;
+    animation: fadingIcon 1.5s alternate infinite;
+}
+.input__content{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-radius: .5em;
+    position: relative;
+}
+.input__content img:first-child{
+    position: absolute;
+    left: 1em;
+}
+.input__content img.close{
+    position: absolute;
+    right: 1em;
+    width: 15px;
+    height: 15px;
+    display: none;
+}
+.input__content img.close.show{
+    display: block;
+}
+
+.input__content img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.input__content img:hover{
+    transform: scale(1.1);
+}
+.input__content input{
+    width: 100%;
+    height: 100%;
+    padding-left: 3em;
+    padding-right: 3em;
+    outline: none;
+    border: none;
+    border-radius: .5em;
+    font-size: 1.1em;
+    caret-color: #333333;
+    border: 1px solid #bcbcbc;
+    transition: all .3s ease;
+    background: transparent;
+}
+    .input__content input:focus{
+        border: 1px solid #333333;
+    }
+    .error__content{
+        margin-top: .3em;  
+        width: 100%;
+        display: flex;
+        align-items: center;
+        display: none;
+    }
+    .error__content.show{
+        display: flex;
+    }
+    .error__content p{
+        color: tomato;
+    }
+    .statement__content{
+        width: 100%;
+        display: none;
+    }
+    .statement__content.show{
+        display: block;
+    }
+    .translation__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: .1em 0 1em 0;
+        padding-bottom: .5em;
+        border-bottom: 1px solid #bcbcbc;
+    }
+    .translation__left__content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: .3em;
+    }
+    .translation__left__content h3{
+        font-size: 1.6em;
+        color: #333333;
+    }
+    .translation__left__content p{
+        font-size: .9em;
+        color: #666666;
+    }
+    
+    .translation__right__content img{
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+    .translation__right__content img:hover{
+        transform: scale(1.05);
+    }
+
+    .sub__translation{
+        width: 100%;
+        height: 70px;
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        padding-left: 1em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        border-radius: .4em;
+        border-left: .4em solid violet;
+        border-right: .4em solid violet;
+        position: relative;
+    }
+    .sub__translation:last-child{
+        border-bottom: none;
+    }
+    .sub__translation p:first-child{
+        margin-bottom: .5em;
+        font-size: 1.3em;
+        font-weight: 600;
+        color: #333333;
+        
+    }
+    .sub__translation p:last-child{
+        font-size: 1em;
+        color: #888888;
+    }
